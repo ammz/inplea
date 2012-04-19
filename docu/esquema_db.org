@@ -1,0 +1,195 @@
+#+OPTIONS: H:2 num:nil toc:t 
+#+STARTUP: hidestarts indent
+
+* VARIABLES
+** ID_VARIABLE 					           :Numérico:
+** VARIABLE 							       :Memo:
+** DESCVAR 							       :Memo:
+** FECPUBLI 							      :Fecha:
+** DESAGRE 							      :Texto:
+** DESFASE 							      :Texto:
+** FORMULA 							      :Texto:
+** OBSERV 							       :Memo:
+** CATEG_ID_CATEGORIA 						   :Numérico:
+** PERIOD_ID_PERIODI 						   :Numérico:
+** UNIMED_ID_UNIMEDI 						   :Numérico:
+** ESTADO 							      :Texto:
+** ACTIVO 							      :Texto:
+** NOTAS_INTERNAS 						       :Memo:
+** FRECUENCIA 							   :Numérico:
+* AMBITOS
+** ID_AMBITOS 							   :Numérico:
+** AMBITO							       :Memo:
+** DESCAMBITO							       :Memo:
+* CATEGOTIAS
+** ID_CATEGORIA					           :Numérico:
+** CATEGORIA							       :Memo:
+** DESCATEG							       :Memo:
+** AMB_ID_AMBITO						   :Numérico:
+* CG_REF_CODES
+** RV_DOMAIN							      :Texto:
+** RV_LOW_VALUE                                                      :Texto:
+** RV_HIGH_VALUE						      :Texto:
+** RV_ABBREVIATION						      :Texto:
+** RV_MEANING							      :Texto:
+* CONSULTAS
+** ID_CONSULTA							   :Numérico:
+** USU_ID_USU							   :Numérico:
+** NOMBCONS							       :Memo:
+** ESTRUC_ID_ESTRUCTURA					   :Numérico:
+** INDIC_ID_INDI						   :Numérico:
+** DESCONS							       :Memo:
+** GRUPOCONS							   :Numérico:
+** FECINI							      :Fecha:
+** FECFIN							      :Fecha:
+* CONVERSIONES
+** ID_CONVE							   :Numérico:
+** CON_DIR							      :Texto:
+** CON_INV							      :Texto:
+** UNIMED_ID_UNIMEDI						   :Numérico:
+** UNIMED_ID_UNIMEDI_PERTENECE					   :Numérico:
+* DATOS
+** ID_DATO							      :Texto:
+** ANNO						           :Numérico:
+** VALOR							   :Numérico:
+** ESTADODAT							      :Texto:
+** FECHACT							      :Fecha:
+** VAR_ID_VARIABLE						   :Numérico:
+** VALDESA_ID_VALDESA						   :Numérico:
+** ANNOEXT							      :Texto:
+* DATOSESTRUCT
+** ID_DATOESTRUCT                                                 :Numérico:
+** TIPO                                                              :Texto:
+** DATEST_ID_DATOESTRUCT                                          :Numérico:
+* DATOSVALDESAS
+** DATO_ID_DATO                                                   :Numérico:
+** VALDESA_ID_VALDESA                                             :Numérico:
+* DOMDESAS
+** ID_DOMDESA                                                     :Numérico:
+** NOMDESA                                                            :Memo:
+* ESTADISTICAS
+** ID_ESTADISTICA                                                 :Numérico:
+** ID_ESTRUCTURA                                                  :Numérico:
+** ID_INDICADOR                                                   :Numérico:
+** ID_ROLE                                                        :Numérico:
+** FECHA                                                             :Fecha:
+* ESTRUCTS_X_INDICS
+** ID_ESTRUCTXINDIC                                               :Numérico:
+** ESTRUCT_ID_ESTRUCTURA                                          :Numérico:
+** INDIC_ID_INDI                                                  :Numérico:
+* ESTRUCTURAS
+** ID_ESTRUCTURA                                                  :Numérico:
+** TIPO                                                              :Texto:
+** ACTIVO                                                            :Texto:
+** NOMBESTR                                                           :Memo:
+** DESCESTR                                                           :Memo:
+** ESTRUCT_ID_ESTRUCTURA                                          :Numérico:
+** ANNOINIC                                                       :Numérico:
+** ANNOFIN                                                        :Numérico:
+** ESTADO                                                            :Texto:
+* FOMULAS
+** ID_FORMULA                                                     :Numérico:
+** FORMULA                                                           :Texto:
+** NOMFORMULA                                                         :Memo:
+** DESCFORMULA                                                        :Memo:
+* FUENTE_X_INDIC
+** FUENTE_ID_FUENTE                                               :Numérico:
+** INDIC_ID_INDI                                                  :Numérico:
+* FUENTE_X_VAR
+** VAR_ID_VARIABLE                                                :Numérico:
+** FUENTE_ID_FUENTE                                               :Numérico:
+* FUENTES
+** ID_FUENTE                                                      :Numérico:
+** NOMFUENTE                                                          :Memo:
+** DESFUENTE                                                          :Memo:
+** NOMORGANISMO                                                       :Memo:
+* GLOSARIOS
+** ID_GLOS                                                        :Numérico:
+** NOMGLOS                                                           :Texto:
+** DESGLOS                                                            :Memo:
+** PALCLAVE                                                           :Memo:
+* GRINDICADORES
+** ID_GRINDI                                                      :Numérico:
+** NOMGRINDI                                                          :Memo:
+* INDICADORES
+** ID_INDI                                                        :Numérico:
+** ACTIVO                                                            :Texto:
+** DESAGRE                                                           :Texto:
+** DESFASE                                                           :Texto:
+** FECPUBLI                                                          :Fecha:
+** FORMULA                                                           :Texto:
+** INDICADOR                                                          :Memo:
+** DESCINDI                                                           :Memo:
+** OBSERV                                                             :Memo:
+** UNIMED_ID_UNIMEDI                                              :Numérico:
+** PERIOD_ID_PERIODI                                              :Numérico:
+** GRINDIC_ID_GRINDI                                              :Numérico:
+** CATEG_ID_CATEGORIA                                             :Numérico:
+** NOTAS_INTERNAS                                                     :Memo:
+** MANUAL                                                            :Texto:
+* OPER_FORMULAS
+** ID_OPFORM                                                      :Numérico:
+** VARIABLE                                                          :Texto:
+** VARIACION                                                         :Texto:
+** FORM_1_ID_FORMULA                                              :Numérico:
+* ORG_X_INDIC
+** INDIC_ID_INDI                                                  :Numérico:
+** ORG_ID_ORGA                                                    :Numérico:
+* ORG_X_VAR
+** ORG_ID_ORGA                                                    :Numérico:
+** VAR_ID_VARIABLE                                                :Numérico:
+* ORGANISMOS
+** ID_ORGA                                                        :Numérico:
+** NOMORGA                                                            :Memo:
+** DESORGA                                                            :Memo:
+* PERIODICIDADES
+** ID_PERIODI                                                     :Numérico:
+** NOMPERIO                                                           :Memo:
+** DESPERIO                                                           :Memo:
+** ETIQUETA                                                          :Texto:
+** PERIODOS                                                       :Numérico:
+** NUMANNO                                                        :Numérico:
+** DATOS                                                             :Texto:
+* RELACIONES
+** ID_RELACION                                                    :Numérico:
+** VARIACION                                                         :Texto:
+** INDIC_ID_INDI                                                  :Numérico:
+** VAR_ID_VARIABLE                                                :Numérico:
+** VALDESA_ID_VALDESA                                             :Numérico:
+** PERIO_ID_PERIO                                                 :Numérico:
+* ROLES
+** ID_ROLE                                                        :Numérico:
+** ROLE                                                              :Texto:
+** DESCRIP                                                           :Texto:
+* ROLES_USUARIOS
+** USU_ID_USU                                                     :Numérico:
+** ROL_ID_ROLE                                                    :Numérico:
+* SUGERENCIAS
+** ID_SUGERENCIA                                                  :Numérico:
+** SUGERENCIA                                                         :Memo:
+** FECHALTA                                                          :Fecha:
+** ORIGEN                                                            :Texto:
+** USUARIO                                                           :Texto:
+** FECHABAJA                                                         :Fecha:
+** ACEPTADO                                                          :Texto:
+* UNIMEDIDAS
+** ID_UNIMEDI                                                     :Numérico:
+** NOMUNIDAD                                                          :Memo:
+** DESUNIDAD                                                          :Memo:
+* USUARIOS
+** ID_USU                                                         :Numérico:
+** USUARIO                                                           :Texto:
+** NOMBRE                                                            :Texto:
+** APELLIDO_1                                                        :Texto:
+** APELLIDO_2                                                        :Texto:
+** DNI                                                               :Texto:
+* VALDESAS
+** ID_VALDESA                                                     :Numérico:
+** NOMVALDESA                                                         :Memo:
+** DOMDESA_ID_DOMDESA                                             :Numérico:
+* VARVARIABLES
+** ID_VARVARIABLE                                                 :Numérico:
+** VARIACION                                                         :Texto:
+** VAR_ID_VARIABLE                                                :Numérico:
+** VAR_ID_VARIABLE_COMPONE                                        :Numérico:
+** PERIO_ID_PERIO                                                 :Numérico:

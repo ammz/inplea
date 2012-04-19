@@ -1,0 +1,5 @@
+      [paste.app_factory]
+      main = inplea:main
+      [console_scripts]
+      initialize_Inplea_db = inplea.scripts.initializedb:main
+      
